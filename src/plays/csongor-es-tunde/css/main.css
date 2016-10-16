@@ -1,0 +1,504 @@
+
+
+
+
+
+  /* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("../../../fonts/playfairdisplay-regular.woff2") format("woff2"),
+         url("../../../fonts/playfairdisplay-regular.woff") format("woff"),
+         url("../../../fonts/playfairdisplay-regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Playfair Display Italic";
+    src: url("../../../fonts/playfairdisplay-italic.woff2") format("woff2"),
+         url("../../../fonts/playfairdisplay-italic.woff") format("woff"),
+         url("../../../fonts/playfairdisplay-italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+  @font-face {
+    font-family: "Kner Antikva";
+    src: url("../../../fonts/kner-antikva-regular.woff2") format("woff2"),
+    url("../../../fonts/kner-antikva-regular.woff") format("woff"),
+    url("../../../fonts/kner-antikva-regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Kner Antikva Italic";
+    src: url("../../../fonts/kner-antikva-italic.woff2") format("woff2"),
+    url("../../../fonts/kner-antikva-italic.woff") format("woff"),
+    url("../../../fonts/kner-antikva-italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+
+
+  .es {
+    -webkit-animation: heart-beats 3s infinite;
+    animation: heart-beats 3s infinite;
+    display: inline-block;
+  }
+
+
+@keyframes heart-beats {
+  0%   { transform: scale(1);}
+  7%  { transform: scale(1.15); }
+  12%  { transform: scale(1.05); }
+  20%  { transform: scale(1.2); }
+  60%  { transform: scale(1); }
+  100% { transform: scale(0.99); }
+}
+
+
+
+  /* ==========================================================================
+   Basics
+   ========================================================================== */
+
+  html {
+    background: #fdfdfa;
+    color: #351105; 
+    font: 16px/1.45 Times, "Times New Roman", serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeSpeed;
+  }
+
+  .fonts-loaded, .fonts-loaded h2 {
+    font-family: "Kner Antikva", Times, "Times New Roman", serif;
+  }
+
+  body { margin: 0; }
+
+  main, nav, section, article, footer { display: block; }
+
+  ::-moz-selection { background: #d5d2d4; text-shadow: none; }
+  ::selection { background: #d5d2d4; text-shadow: none; }
+
+  i {
+    letter-spacing: 0;
+    font-size: 1.032rem;
+  }
+
+  i::after { content: " "; }
+
+  .fonts-loaded i, .fonts-loaded .irta {
+    font-family: "Kner Antikva Italic", Times, "Times New Roman", serif;
+    font-style: italic;
+  }
+
+  small {
+    font-size: 80%;
+  }
+
+  td[rowspan] {
+    border-left: 1px solid #3b3b3b;
+    padding-left: 5px;
+  }
+
+  h1, h2 { font: normal 1.618rem Times, "Times New Roman", serif; }
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+   Link Styles
+   ========================================================================== */
+
+  a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    text-decoration: none;
+  }
+
+  a span {
+    padding: 0;
+    letter-spacing: 0.075em;
+  }
+
+  dl a, nav a, footer a  { color: #d56360; }
+
+  nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    width: 70%;
+  }
+
+  a:visited,
+  nav a:visited span:last-child { 
+    color: #351105;
+  }
+
+  a:hover,
+  a:focus {
+    color: #351105;
+  }
+
+  nav a:hover span:last-child,
+  nav a:focus span:last-child {
+    color: #d56360;
+  }
+
+  a:active { position: relative; top: 1px; }
+
+  h2 a { color: #351105; }
+
+  #elso-felvonas:target h2 a,
+  #masodik-felvonas:target h2 a,
+  #harmadik-felvonas:target h2 a,
+  #negyedik-felvonas:target h2 a,
+  #otodik-felvonas:target h2 a {
+    color: #d56360;
+  }
+
+  nav a span:last-child {
+    display: block;
+    color: #351105;
+    text-transform: none;
+    font-style: italic;
+    font-family: "Kner Antikva Italic", Times, "Times New Roman", serif;
+  }
+
+      dd { margin-bottom: 1.618rem; }
+    dt a, footer a { font-family: "Kner Antikva Italic", Times, "Times New Roman", serif;  border-bottom: 1px solid #d56360; }
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+   Title Text Styles
+   ========================================================================== */
+
+  h1 { font-family: Times, "Times New Roman", serif;  }
+
+  .fonts-loaded h1 { 
+    font-family: "Playfair Display", Times, "Times New Roman", serif;
+  }
+
+  .fonts-loaded .bottom-line,
+  .fonts-loaded .voros { font-family: "Kner Antikva", Times, "Times New Roman", serif; }
+
+  h1 {
+    letter-spacing: 0.025em;
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 4.5rem;
+    margin: 1em 0 0;
+    line-height: .85em;
+  }
+
+  .irta::after { content: " "; }
+
+  .tunde,
+  .lett-s,
+  .lett-n,
+  .lett-o { font-style: italic; font-family: "Playfair Display Italic", Times, "Times New Roman", serif; }
+
+  .es, .voros {  color: #e77976; }
+
+  .voros { text-transform: uppercase; }
+
+  .bottom-line { font-size: .95rem; line-height: 3em; display: block; }
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+   Main Text
+   ========================================================================== */
+
+  h2 {
+      padding-top: 4rem;
+      letter-spacing: .055em;
+      text-transform: uppercase;
+  }
+
+  section, footer, .links { 
+    margin-left: .9rem; 
+    max-width: 28.25rem; 
+    -webkit-font-feature-settings: "liga";
+  }
+
+  .links h2 { text-transform: none; }
+
+  footer p { margin-top: 5rem; }
+  footer p::first-line { letter-spacing: 0; }
+
+  .links { margin-top: 10rem; }
+
+  h2 + p br { display: none; }
+  i br { display: none; }
+
+  .links h2 { padding-top: 3rem; }
+
+  ul { 
+    list-style-type: none; 
+    text-align: center; 
+    margin: 0; 
+    padding: 0; 
+    position: relative;
+  }
+
+  nav {
+    padding: 3rem 0 1rem;
+  }
+
+  .menu { 
+    font-family: sans-serif; 
+    font-size: 2.5rem; 
+    position: fixed; 
+    top: 0; 
+    right: .5rem;
+  }
+
+  .menu a { padding: 0; margin: 0; }
+
+
+
+  /* Indent
+  ========================================================================== */
+
+  .s2 { margin-left: -.3rem; padding: 0; }
+  .dal { padding-left: 3.473rem; }
+  
+  .ind1 { padding-left: 1.073rem; }
+  .ind2 { padding-left: 1.473rem; }
+  .ind3 { padding-left: 1.873rem; }
+  .ind4 { padding-left: 2.273rem; }
+  .ind5 { padding-left: 2.673rem; }
+  .ind6 { padding-left: 3.073rem; }
+  .ind7 { padding-left: 3.473rem; }
+  .ind8 { padding-left: 3.873rem; }
+  .ind9 { padding-left: 4.273rem; }
+  .ind05 {  padding-left: 0.53rem; }
+  .ind10 { padding-left: 4.673rem; }
+  .ind11 { padding-left: 5.073rem; }
+  .ind12 { padding-left: 5.473rem; }
+  .ind13 { padding-left: 6.873rem; }
+  .ind14 { padding-left: 7.273rem; }
+  .ind15 { padding-left: 7.873rem; }
+  .ind305 { padding-left: 2.103rem; }
+  .ind125 { padding-left: 6.273rem; }
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+   Responsive Fixes
+   ========================================================================== */
+
+
+
+
+  /*480*/
+  @media screen and (min-width: 30em) {
+
+      html { font-size: 18px; line-height: 1.45; }
+      p { margin-bottom: 1.45rem; }
+      ul:last-child { padding-bottom: 1rem; }
+
+  }
+
+
+
+
+
+  /*740*/
+  @media screen and (min-width: 46.25em) {
+
+      html { text-rendering: optimizeLegibility; font-size: 23px; line-height: 1.45; }
+      section, footer, .links { margin-left: 1.618rem; }
+      ul { text-align: left; padding-left: 0.518rem; }
+      i br { display: inline; }
+      h2 + p br { display: inline; }
+      h1 { margin: .7em 0 3rem; font-size: 6.2rem; }
+      .bottom-line { font-size: 1.35rem; }
+
+  }
+
+
+    /*970*/
+  @media screen and (min-width: 60.625em) {
+
+    ul:last-child { padding-bottom: 2.5rem; }
+    section, footer, .links { margin-left: 4.236rem; }
+    ul { text-align: left; padding-left: 3.218rem; }
+    h1 { font-size: 6.8rem; }
+    .bottom-line { font-size: 1.5rem; }
+
+  }
+
+  /*1268*/
+  @media screen and (min-width: 79.25em) {
+
+    section { margin: auto; padding-left: 20rem; }
+    .links, footer { margin-left: 11.090rem; }
+    h2 + p { text-align: center; width: 33rem; margin-left: -9rem; margin-bottom: 2rem; }
+    h2 { padding-top: 7rem; }
+
+    ul { text-align: center; padding: 0; margin: 0; }
+
+    #szemelyek { padding-left: 20.5rem; }
+    #szemelyek h2 { padding-top: 5rem; }
+
+    #elso-felvonas h2 { margin-left: -1.5rem; }
+    #elso-felvonas h2 + p { margin-left: -11.4rem; }
+
+    #masodik-felvonas h2 { margin-left: -3rem; }
+    #masodik-felvonas h2 + p { margin-left: -11rem; }
+
+    #harmadik-felvonas h2 { margin-left: -2.6rem; }
+    #harmadik-felvonas h2 + p { margin-left: -10rem; }
+
+    #negyedik-felvonas h2 { margin-left: -3.2rem; }
+    #negyedik-felvonas h2 + p { margin-left: -11rem; }
+
+    #otodik-felvonas h2 { margin-left: -2rem; }
+    #otodik-felvonas h2 + p { margin-left: -10.7rem; }
+
+    #otodik-felvonas { padding-bottom: 7rem; }
+
+    a:hover,
+    a:focus {
+        -webkit-transition: color 0.5s ease-out;
+        transition: color 0.5s ease-out;
+    }
+
+
+    nav a:hover span:last-child,
+    nav a:focus span:last-child,
+    nav a span:last-child,
+    nav a, dl a {
+        -webkit-transition: color 0.5s ease-out;
+        transition: color 0.5s ease-out;
+    }
+
+
+    h1 { font-size: 6.9rem; }
+    h1 br { display: none; }
+    .es { font-size: 9.9rem; }
+    .tunde { display: inline-block; margin-left: -0.5rem; }
+    .bottom-line {
+      margin-left: 18rem;
+      font-size: 2rem;
+      line-height: 2.7em;
+    }
+
+  }
+
+
+    /*1450*/
+    @media screen and (min-width: 90.625em) {
+
+        h1 { font-size: 7.5rem; margin: .7em 0 4rem;}
+        .es { font-size: 11.5rem; }
+        .bottom-line {
+          margin-left: 20rem;
+          font-size: 2.2rem;
+          line-height: 3.3em;
+        }
+
+    }
+
+    @media screen
+    and (min-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 1) { 
+
+      ::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); }
+      ::-webkit-scrollbar-thumb { background: #d56360; height: 3rem; }
+      ::-webkit-scrollbar { width: 14px; }
+
+  }
+
+  /*1650*/
+  @media screen and (min-width: 103.125em) {
+
+        h1 { font-size: 8rem; margin: 1em 0 4rem;}
+        .es { font-size: 12rem; }
+        .bottom-line {
+          margin-left: 22rem;
+          font-size: 2.3rem;
+        }
+
+  }
+
+  /* Full Screen */
+  @media (min-width: 1900px) and (min-height: 960px) {
+
+    h1 { font-size: 10rem; margin: 1.1em 0 11rem;}
+    .es { font-size: 14rem; }
+    .bottom-line {
+      margin-left: 30.5rem;
+      font-size: 2.6rem;
+    }
+  }
+
+  @media (min-width: 1900px) and (min-height: 1079px) {
+    h1 { font-size: 10rem; margin: 1.4em 0 11rem; }
+  }
+
+
+
+
+
+
+
+  /* ==========================================================================
+   Scrollbar Styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

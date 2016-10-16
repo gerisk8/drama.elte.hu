@@ -1,0 +1,374 @@
+
+
+
+
+
+  /* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+
+    @font-face {
+      font-family: "Kner Antikva";
+      src: url("../../../fonts/kner-antikva-regular.woff2") format("woff2"),
+      url("../../../fonts/kner-antikva-regular.woff") format("woff"),
+      url("../../../fonts/kner-antikva-regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Kner Antikva Italic";
+      src: url("../../../fonts/kner-antikva-italic.woff2") format("woff2"),
+      url("../../../fonts/kner-antikva-italic.woff") format("woff"),
+      url("../../../fonts/kner-antikva-italic.ttf") format("truetype");
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+
+
+
+
+  /* ==========================================================================
+   Basics
+   ========================================================================== */
+
+
+    html {
+      background: #fffff2;
+      color: #3e4147;
+
+      font-size: calc( 16px + (22 - 16) * ( (100vw - 320px) / (650 - 320) ) );
+      line-height: calc( 1.3em + (1.5 - 1.3) * ( (100vw - 21em) / (35 - 21) ) );
+      font-family: "Kner Antikva", Times, "Times New Roman", serif;
+      word-spacing: calc(-.27em + 1vw);
+      -moz-hyphens: auto;
+      
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-rendering: optimizeSpeed;
+    }
+
+    body { margin: 0; }
+
+    main, nav, section, footer { display: block; }
+
+    section { padding: 0 1.618rem; }
+
+    ::-moz-selection { background: #d5d2d4; text-shadow: none; }
+    ::selection { background: #d5d2d4; text-shadow: none; }
+
+
+
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+
+    a {
+      color: #9c8427;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+      text-decoration: none;
+    }
+
+    nav a:link {
+      position: relative;
+      display: inline-block;
+      margin: 12px 25px;
+      text-transform: uppercase;
+      letter-spacing: .025em;
+      width: 70%;
+    }
+
+    a:visited { color: #67737e; }
+
+    a:hover,
+    a:focus { 
+      color: #ccc4aa; 
+    }
+
+    a:active { position: relative; top: 1px; }
+
+    h2 a { color: #3e4147; }
+
+    #elojatek:target h2 a,
+    #elso-felvonas:target h2 a,
+    #masodik-felvonas:target h2 a,
+    #harmadik-felvonas:target h2 a,
+    #negyedik-felvonas:target h2 a,
+    #otodik-felvonas:target h2 a {
+      color: #9c8427;
+    }
+
+
+
+
+
+  /* ==========================================================================
+   Title & Header
+   ========================================================================== */
+
+
+    .le { fill: #fffff2; }
+    .o  { fill: #9c8427; }
+    .na { fill: #ccc4aa; }
+
+    header, ul { margin: 1rem auto 0; text-align: center; }
+
+    ul { 
+      list-style-type: none;
+      position: relative;
+      margin: 0; 
+      padding: 2rem 0 1rem;
+    }
+
+    .menu { 
+      font-family: sans-serif; 
+      font-size: 2rem;
+      line-height: .5;
+      position: fixed; 
+      top: 1rem; 
+      right: .5rem;
+    }
+
+    .menu a:link { padding: 0; margin: 0; }
+
+
+    /* Title Text */
+    .alcim {
+      font-size: calc(.7em + 1vw);
+      letter-spacing: .075em;
+      color: #67737e;
+      text-transform: uppercase;
+    }
+
+    .ev { 
+      font-size: calc(2.5em + 1vw);
+      letter-spacing: .3em;
+      color: #fffff2;
+      line-height: 0;
+    }
+
+    .irta  {
+      font-size: calc(1.1em + 1vw);
+      line-height: .4;
+      color: #67737e;
+    }
+
+    .czako { color: #9c8427; }
+
+
+    /* Slanted Bottom Line */
+    .top {
+      padding: 3.5rem 1.618rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .top::after {
+      background: #05051f;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      height: 6%;
+      transform: skewY(-2deg);
+      transform-origin: 100%;
+      z-index: -1;
+    }
+
+
+    /* Background */
+    header { position:relative; z-index:5; }
+
+    #tartalom { position: relative; z-index: 10; }
+
+    .stars, .twinkling {
+      background:#05051f;
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      width:100%;
+    }
+
+
+
+
+
+  /* ==========================================================================
+   Main Text
+   ========================================================================== */
+
+
+    span { letter-spacing: .05em; }
+
+    i, .irta, small { font-family: "Kner Antikva Italic", Times, "Times New Roman", serif; }
+
+    i { font-size: 1.032rem; }
+    i::after { content: " "; }
+
+
+    /* Image Replacement */
+    h1 {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    h2, h3 {
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-size: 1.25rem;
+      line-height: 1.1;
+      padding-top: 2rem;
+    }
+
+    h2 { font-size: 1.563rem; padding-top: 4rem; }
+
+    h2 + h3 { padding-top: .5rem; }
+
+    main {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    footer {
+      padding: 1rem 1.618rem 2rem;
+      max-width: 650px;
+      margin: auto;
+      text-align: right;
+    }
+
+    small {
+      font-size: 80%;
+      border-bottom: 1px solid #9c8427;
+    }
+
+
+
+
+
+  /* ==========================================================================
+   Responsive Fixes
+   ========================================================================== */
+
+
+    /*600*/
+    @media screen and (min-width: 37.5em) {
+
+      header { max-width: 600px; }
+
+    }
+
+
+    /*740*/
+    @media screen and (min-width: 46.25em) {
+
+      html { font: 1.5em/1.45 "Kner Antikva", Times, "Times New Roman", serif; word-spacing: 0; }
+      section { padding: 0; }
+      h1 {margin-top: 5rem;}
+      .alcim { font-size: calc(.7em + 1vw); }
+
+    }
+
+
+
+    /*970*/
+    @media screen and (min-width: 60.625em) {
+
+      html { text-rendering: optimizeLegibility; }
+
+
+
+      /* Animated Background */
+      @keyframes move-twink-back {
+        from { background-position: 0 0; }
+        to { background-position: -10000px 5000px; }
+      }
+
+      .stars {
+        background: #05051f url(../img/stars.png) repeat top center;
+      }
+
+      .twinkling{
+        background: transparent url(../img/twinkling.png) repeat top center;
+        animation: move-twink-back 400s linear infinite;
+      }
+
+    }
+
+
+
+    /*1240*/
+    @media screen and (min-width: 77.5em) {
+      
+      a:hover,
+      a:focus,
+      nav a,
+      small a,
+      h2 a {
+        -webkit-transition: color 0.5s ease-out;
+        transition: color 0.5s ease-out;
+      }
+
+      header { max-width: 800px; }
+      .alcim { font-size: calc(.8em + 1vw); }
+
+    }
+
+
+
+    /*1450*/
+    @media screen and (min-width: 90.625em) {
+
+      .alcim { font-size: 41px; }
+      header { max-width: 1025px; margin-top: 5rem; }
+
+    }
+
+
+
+    /*1650*/
+    @media screen and (min-width: 103.125em) {
+
+      nav { margin-top: 7rem; margin-bottom: 3rem; }
+      main { margin-top: 5rem; }
+
+    }
+
+
+
+    /* Full Screen 1080p */
+    @media (min-width: 1900px) and (min-height: 1079px) {
+
+      header { margin-top: 7rem; }
+      nav { margin-top: 8rem; margin-bottom: 4rem; }
+
+    }
+
+
+    /* Scrollbar */
+    @media screen
+      and (min-device-width: 1600px)
+      and (-webkit-min-device-pixel-ratio: 1) { 
+
+        ::-webkit-scrollbar-track { background: #05051f; }
+        ::-webkit-scrollbar-thumb { background-color: #9c8427; height: 2.7rem; }
+        ::-webkit-scrollbar { width: 14px; }
+
+    }

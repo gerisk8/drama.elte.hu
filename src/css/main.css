@@ -1,0 +1,263 @@
+
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+     Basics
+     ========================================================================== */
+
+
+    html { 
+      font-family: Alegreya, Times, "Times New Roman", serif;
+      background: #ee4700;
+      color: #210b00; 
+      border: 6px solid #ee4700; 
+      font-size: calc( 16px + (22 - 16) * ( (100vw - 320px) / (650 - 320) ) );
+
+      -moz-hyphens: auto;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-rendering: optimizeSpeed;
+    }
+
+    body {
+      margin: 0;
+      padding: 1.618rem 1.618rem .8rem;
+      border: 10px solid #210b00; 
+    }
+
+    main, footer { display: block; }
+
+    main { 
+      margin: auto;
+    }
+
+    /* Image Replacement */
+    header, h2 {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    p { font-weight: bold; padding: 0 .4rem; }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: -1.5rem;
+    }
+
+    footer {text-align: right;}
+
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+   Links
+   ========================================================================== */
+
+
+    a:link {
+      color: #fff;
+      text-decoration: none;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+      text-decoration: none;
+    }
+
+    a:visited { color: #7d2509; }
+
+    a:hover, a:focus { fill: #fff; color: #f3c251; }
+
+    a:active { position: relative; top: 1px; }
+    
+
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+    Title SVGs
+   ========================================================================== */
+
+
+    .title {
+      fill: #fff;
+      position: relative; 
+      z-index: 1;
+      margin-top: -100rem;
+    }
+
+    .it { font-style: italic; }
+    .bold { font-weight: bold; }
+    .num { fill: #fff; }
+    .quote { font-style: italic; font-weight: bold; fill: #fff; }
+
+    .title .it {font-size: 127px; }
+    .bottom tspan { font-weight: bold; font-size:35px; }
+    .leona, .trag, .csest { padding-top: 1rem; display: block; margin: auto; }
+    .csest { padding: 0; margin: 1.5rem auto 3rem; }
+
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+    /*820*/
+    @media screen and (min-width: 820px) {
+      main { max-width: 85%; }
+    }
+
+
+    /*970*/
+    @media screen and (min-width: 60.625em) {
+      html { text-rendering: optimizeLegibility; }
+    }
+
+
+    /*1150*/
+    @media screen and (min-width: 1150px) {
+      
+      html { font: 1.6em/1.45 Alegreya, Times, "Times New Roman", serif; }
+
+      p { word-spacing: .05em; padding-left: 6%; }
+
+      main {  
+        max-width: 75%;
+        margin-top: -2.5rem;
+      }
+
+      .leona, .trag, .csest { max-width: 85%; }
+
+      a:link,
+      a:hover,
+      a:focus {
+        -webkit-transition: fill 0.8s ease-out;
+        transition: fill 0.8s ease-out;
+      }
+
+      img {
+        margin-bottom: -2rem;
+        animation: rotate ease-in-out 30s infinite;
+      }
+
+    }
+
+
+    /*1320*/
+    @media screen and (min-width: 1320px) {
+      main { max-width: 70%; }
+      .leona, .trag, .csest { max-width: 80%; }
+    }
+
+
+    /*1450*/
+    @media screen and (min-width: 90.625em) {
+      main { max-width: 65%; margin-top: -2rem; }
+    }
+
+
+    /*1650*/
+    @media screen and (min-width: 1650px){
+      main { max-width: 55%; margin-top: -2.5rem; }
+      .leona, .trag, .csest { max-width: 85%; }
+      html {border: 14px solid #ee4700;}
+      body {border: 25px solid #210b00;}
+    }
+
+
+    @media screen and (min-width: 740px) {
+        html { border: 14px solid #ee4700;}
+        body { border: 14px solid #210b00;}
+    }
+
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+   Border Fixies for Webkit Browsers
+   ========================================================================== */
+
+
+    @media screen
+      and (min-width: 1650px)
+      and (min-device-width: 1600px)
+      and (-webkit-min-device-pixel-ratio: 0) {
+        html { border-right: 0; }
+        body { border: 25px solid #210b00; }
+    }
+
+
+    /* Scrollbar */
+    @media screen
+      and (min-width: 740px)
+      and (min-device-width: 1600px)
+      and (-webkit-min-device-pixel-ratio: 0) { 
+
+        html { border: 14px solid #ee4700; border-right: 0; }
+        body { border: 14px solid #210b00; border-right: 14px solid #210b00; }
+        ::-webkit-scrollbar-track { background: #210b00; }
+        ::-webkit-scrollbar-thumb { background-color: #ee4700; }
+        ::-webkit-scrollbar { width: 14px; }
+
+    }
+
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+   Animation
+   ========================================================================== */
+
+
+    @keyframes rotate {
+      0% { transform: rotateY(0deg); }
+      20% { transform: rotateY(15deg) rotateX(15deg); }
+      40% { transform: rotateY(-15deg) rotateX(15deg); }
+      60% { transform: rotateY(-15deg) rotateX(-15deg); }
+      80% { transform: rotateY(15deg) rotateX(-15deg); }
+      100% { transform: rotateY(0deg) rotateX(0deg); }
+    }

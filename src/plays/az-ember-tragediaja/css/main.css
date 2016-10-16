@@ -1,0 +1,494 @@
+
+
+
+
+
+    /* ==========================================================================
+     Fonts
+     ========================================================================== */
+
+    @font-face {
+        font-family: "Kner Antikva";
+        src: url("../../../fonts/kner-antikva-regular.woff2") format("woff2"),
+        url("../../../fonts/kner-antikva-regular.woff") format("woff"),
+        url("../../../fonts/kner-antikva-regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Kner Antikva Italic";
+        src: url("../../../fonts/kner-antikva-italic.woff2") format("woff2"),
+        url("../../../fonts/kner-antikva-italic.woff") format("woff"),
+        url("../../../fonts/kner-antikva-italic.ttf") format("truetype");
+        font-weight: 400;
+        font-style: italic;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* ==========================================================================
+     Basics
+     ========================================================================== */
+
+    html {
+        background: #f9f8f3;
+        color: #3b3b3b;
+        font: 16px/1.4 Georgia, Times, "Times New Roman", serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        text-rendering: optimizeSpeed;
+    }
+
+    .fonts-loaded, .fonts-loaded h2, .genre, .title-top, .title-bottom { font-family: "Kner Antikva", Times, "Times New Roman", serif; }
+
+    ::-moz-selection { background: #d5d2d4; text-shadow: none; }
+    ::selection { background: #d5d2d4; text-shadow: none; }
+
+    header, main, nav, section, article, footer { display: block; }
+
+    body { margin: 0;}
+
+    small { font-size: 80%; }
+
+
+
+
+
+
+
+
+
+
+    /* ==========================================================================
+     Link Styles
+     ========================================================================== */
+
+    a {
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a span {
+        padding: 0;
+        letter-spacing: 0.075em;
+    }
+
+    dl a, nav a, footer a { color: #a68b1d; }
+
+    nav a {
+        position: relative;
+        display: inline-block;
+        margin: 15px 25px;
+        text-transform: uppercase;
+        letter-spacing: 0.075em;
+        width: 70%;
+    }
+
+    a:visited,
+    nav a:visited span:last-child { 
+        color: #3b3b3b;
+    }
+
+    a:hover,
+    a:focus {
+        color: #3b3b3b;
+    }
+
+    nav a:hover span:last-child,
+    nav a:focus span:last-child {
+        color: #a68b1d;
+    }
+
+    a:active { position: relative; top: 1px; }
+
+    h2 a { color: #3b3b3b; }
+
+    #elso-szin:target h2 a,
+    #masodik-szin:target h2 a,
+    #harmadik-szin:target h2 a,
+    #negyedik-szin:target h2 a,
+    #otodik-szin:target h2 a,
+    #hatodik-szin:target h2 a,
+    #hetedik-szin:target h2 a,
+    #nyolcadik-szin:target h2 a,
+    #kilencedik-szin:target h2 a,
+    #tizedik-szin:target h2 a,
+    #tizenegyedik-szin:target h2 a,
+    #tizenkettedik-szin:target h2 a,
+    #tizenharmadik-szin:target h2 a,
+    #tizennegyedik-szin:target h2 a,
+    #tizenotodik-szin:target h2 a {
+        color: #a68b1d;
+    }
+
+    nav a span:last-child {
+        display: block;
+        color: #3b3b3b;
+        text-transform: none;
+        font-style: italic;
+        font-family: "Kner Antikva Italic", Times, "Times New Roman", serif;
+    }
+
+    dd { margin-bottom: 1.618rem; }
+    dt a, footer a { font-family: "Kner Antikva Italic", Times, "Times New Roman", serif;  border-bottom: 1px solid #a68b1d; }
+
+
+
+
+
+
+
+
+
+
+    /* ==========================================================================
+     Title Typography
+     ========================================================================== */
+
+    h1, h2 { font: normal 1.618rem Georgia, Times, "Times New Roman", serif; }
+
+    .fonts-loaded h1 { font-family: "Kner Antikva Italic", Times, "Times New Roman", serif; }
+
+    h1 {
+        padding-top: 3rem;
+        text-align: center;
+        font-size: .85rem;
+        color: #3b3b3b;
+        cursor: default;
+        font-style: italic;
+    }
+
+    h1 span { padding: 0; }
+
+    .the { font-size: 1.5em; }
+
+    .title-top, .title-bottom {
+        text-transform: uppercase;
+        font-size: 2.5em;
+        letter-spacing: .15em;
+        display: block;
+        font-style: normal;
+    }
+
+    .title-bottom {
+        margin-top: -0.1em;
+    }
+
+    .genre {
+        text-transform: uppercase;
+        color: #a68b1d;
+        letter-spacing: 0.2em;
+        font-size: .8em;
+        font-style: normal;
+    }
+
+    .written { font-size: .8em; }
+
+    .madach {
+        font-size: 2.5em;
+        letter-spacing: 0.05em;
+        display: block;
+        padding-top: 0.1em;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* ==========================================================================
+     Main Text
+     ========================================================================== */
+
+    h2 {
+        padding-top: 4rem;
+        letter-spacing: .075em;
+    }
+
+    p { margin-bottom: 1.4rem; }
+    p::first-line { letter-spacing: .075em; }
+
+    h2 + p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin-right: .9rem;
+        padding-bottom: 2rem;
+    }
+
+    h2 + p i {
+        font-size: 1.1rem;
+    }
+
+    section, footer, .links { margin-left: .9rem; max-width: 28.25rem; -webkit-font-feature-settings: "liga"; }
+
+    footer p { margin-top: 5rem; }
+    footer p::first-line { letter-spacing: 0; }
+
+    .links { margin-top: 10rem; }
+
+    h2 + p br { display: none; }
+
+    .links h2 { padding-top: 3rem; }
+
+    ul { list-style-type: none; text-align: center; margin: 0; padding: 0; position: relative; }
+
+    header { padding-bottom: 1rem; }
+
+    nav { padding-top: 3rem; }
+
+    .menu { font-family: sans-serif; font-size: 2.5rem; position: fixed; top: 0; right: .5rem;}
+    .menu a { padding: 0; margin: 0; }
+
+
+
+
+
+
+
+    i, em {
+        letter-spacing: 0; font-size: 1.032rem;
+    }
+
+    i::after { content: " "; }
+    .links i::after { content: ""; }
+
+    i br { display: none; }
+
+    .fonts-loaded i,
+    .fonts-loaded em { font-family: "Kner Antikva Italic", Times, "Times New Roman", serif; }
+
+
+        
+     /* Indent
+     ========================================================================== */
+
+    span { padding-left: 2.673rem; letter-spacing: 0;}
+    .ind1 { padding-left: 4.373rem; }
+    .ind2 { padding-left: 6.773rem; }
+    .ind3 { padding-left: 3.273rem; }
+    .ind4 { padding-left: 6.773rem; }
+    .ind5 { padding-left: 7.773rem; }
+    .ind6 { padding-left: 8.773rem; }
+    .ind7 { padding-left: 5.573rem; }
+    .ind9 { padding-left: 3.973rem; }
+    .ind10 { padding-left: 1.073rem; }
+    .ind11 { padding-left: 4.073rem; }
+    .ind12 { padding-left: 1.673rem; }
+    .ind13 { padding-left: .673rem; }
+    .ind14 { padding-left: 7.073rem; }
+    .ind15 { padding-left: 2.073rem; }
+    .ind16 { padding-left: .673rem; }
+    .ind17 { padding-left: 7.473rem; }
+    .ind18 { padding-left: 4.873rem; }
+    .ind19 { padding-left: .373rem; }
+    .ind20 { padding-left: 9.173rem; }
+    .ind21 { padding-left: 8.173rem; }
+    .ind22 { padding-left: 5.573rem; }
+    .ind23 { padding-left: 8.373rem; }
+    .ind24 { padding-left: 5.873rem; }
+    .ind25 { padding-left: 9.373rem; }
+    .ind26 { padding-left: 2.373rem; }
+    .ind28 { padding-left: 6.273rem; }
+    .ind29 { padding-left: 2.973rem; }
+    .ind30 { padding-left: 7.273rem; }
+    .ind31 { padding-left: 9.673rem; }
+
+    .nospace { letter-spacing: 0;  padding-left: 0;}
+
+    .s2 { margin-left: -.3rem; padding: 0;}
+
+    
+
+    
+
+
+
+
+
+
+    /* ==========================================================================
+     Responsive Fixes
+     ========================================================================== */
+
+    /*400*/
+    @media screen and (min-width: 25em) {
+
+        h1 { font-size: 1em; }
+        .title-top, .title-bottom { letter-spacing: .2em; }
+
+    }
+
+
+    /*480*/
+    @media screen and (min-width: 30em) {
+
+        html { font-size: 18px; line-height: 1.45; }
+        p { margin-bottom: 1.45rem; }
+        ul:last-child { padding-bottom: 1rem; }
+
+    }
+
+
+    /*640*/
+    @media screen and (min-width: 40em) {
+
+        h1 { font-size: 1.2em; }
+        .title-top, .title-bottom { letter-spacing: .25em; }
+ h2 + p br { display: inline; }
+    }
+
+
+    /*740*/
+    @media screen and (min-width: 46.25em) {
+
+        html { text-rendering: optimizeLegibility; font-size: 23px; line-height: 1.45; }
+        section, footer, .links { margin-left: 1.618rem; }
+        ul { -webkit-columns: 2; -moz-columns: 2; columns: 2; text-align: center; padding-left: 1.618rem; }
+        ul li a { text-align: left; }
+        i br { display: inline; }
+        h1 { font-size: 1.35em; }
+       
+
+    }
+
+
+    /*970*/
+    @media screen and (min-width: 60.625em) {
+
+        ul:last-child { padding-bottom: 2.5rem; }
+        h1 { font-size: 1.75em; padding: 4rem 0 2rem; }
+        ul { font-size: 19px; -webkit-columns: 3; -moz-columns: 3; columns: 3; }
+		section, footer, .links { margin-left: 4.236rem; }
+
+
+
+    }
+
+
+    /*1268*/
+    @media screen and (min-width: 79.25em) {
+
+        section { margin: auto; padding-left: 16rem; }
+        .links, footer { margin-left: 11.090rem; }
+        h2 + p { text-align: center; width: 33rem; margin-left: -9rem; margin-bottom: 2rem; }
+        h2 { padding-top: 7rem; }
+        ul { padding-left: 3rem;}
+        h1 { font-size: 2.1em; padding: 6rem 0 3rem; }
+
+        #elso-szin h2 + p { margin-left: -10rem; }
+        #elso-szin h2 { margin-left: 2rem; }
+
+        #masodik-szin h2 { margin-left: .8rem; }
+        #masodik-szin h2 + p { margin-left: -9.7rem; }
+
+        #harmadik-szin h2 + p { margin-left: -9.7rem; }
+
+        #negyedik-szin h2 { margin-left: -0.3rem; }
+        #negyedik-szin h2 + p { margin-left: -10.1rem; }
+
+        #otodik-szin h2 + p { margin-left: -9.6rem; }
+        #otodik-szin h2  { margin-left: 1.5rem; }
+
+        #hatodik-szin h2  { margin-left: .6rem; }
+        #hatodik-szin h2 + p { margin-left: -9.9rem; }
+
+        #hetedik-szin h2 { margin-left: .6rem; }
+        #hetedik-szin h2 +p { margin-left: -10.1rem; }
+        
+
+        #nyolcadik-szin h2 { margin-left: -.4rem; }
+        #nyolcadik-szin h2 + p { margin-left: -9.7rem; }
+
+        #tizedik-szin h2  { margin-left: 1.5rem; }
+        #tizedik-szin h2 + p { margin-left: -9.5rem; }
+
+
+        #tizenegyedik-szin h2 { margin-left: -2rem; }
+        #tizenegyedik-szin h2 + p { margin-left: -9.9rem; }
+
+        #tizenkettedik-szin h2 { margin-left: -1.7rem; }
+
+        #tizenharmadik-szin h2 { margin-left: -1.95rem; }
+
+        #tizennegyedik-szin h2 { margin-left: -2.3rem; }
+        #tizennegyedik-szin h2 + p { margin-left: -9.4rem; }
+
+        #tizenotodik-szin h2 { margin-left: -1rem; }
+        #tizenotodik-szin h2 + p { margin-left: -9.3rem; }
+
+
+
+        a:hover,
+        a:focus {
+            -webkit-transition: color 0.5s ease-out;
+            transition: color 0.5s ease-out;
+        }
+
+
+        nav a:hover span:last-child,
+        nav a:focus span:last-child,
+        nav a span:last-child,
+        nav a, dl a {
+            -webkit-transition: color 0.5s ease-out;
+            transition: color 0.5s ease-out;
+        }
+
+    }
+
+
+    /*1366*/
+    @media screen and (min-width: 85.375em) {
+
+        ul { font-size: 23px; }
+
+    }
+
+
+    /*1450*/
+    @media screen and (min-width: 90.625em) {
+
+        html { font-size: 23px; }
+        ul { padding-left: 4rem; }
+        h1 { font-size: 2.27em; padding: 5rem 0 2rem; }
+
+    }
+
+      /* Full Screen */
+      @media (min-width: 1900px) and (min-height: 960px) {
+
+      h1 { font-size: 2.57em; padding: 3.5rem 0 3rem; }
+
+    }
+
+    @media (min-width: 1900px) and (min-height: 1079px) {
+        h1 { font-size: 2.67em; padding: 4.5rem 0 6rem; }
+    }
+
+
+
+
+    /* ==========================================================================
+     Scrollbar Styles
+     ========================================================================== */
+
+    @media screen
+      and (min-device-width: 1600px)
+      and (-webkit-min-device-pixel-ratio: 1) { 
+
+        ::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); background: #f9f8f3; }
+        ::-webkit-scrollbar-thumb { background-color: #3b3b3b; height: 2.7rem; }
+        ::-webkit-scrollbar { width: 14px; }
+
+    }
